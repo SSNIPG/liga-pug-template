@@ -1,0 +1,24 @@
+.promo-banner {
+  padding: 105px 0 123px;
+
+  &__inner {
+    padding: 81px 65px 94px;
+    background-color: $color-default-white;
+    border-radius: 72px;
+    box-shadow: 0 4px 20px 0 rgba(134, 134, 134, 0.01);
+  }
+
+  &__title {
+    padding: 0 80px;
+    margin-bottom: 16px;
+    text-align: center;
+
+    h2 {
+      margin: 0;
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: 700;
+      color: #302828;
+    }
+  }
+}

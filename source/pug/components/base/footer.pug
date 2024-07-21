@@ -1,3 +1,46 @@
 mixin footer(footerMods)
   footer.footer(class=footerMods)
     .container
+      .footer__wrapper
+        .footer__logo-block
+          a.footer__logo(href="index.html", aria-label="Переход на главную")
+            span FindEdu
+            +icon("icon-footer-logo", 36, 41)
+        .footer__copyright
+          span © FindEdu 2022.
+          span Все права защищены.
+      .footer__nav
+        dl.footer__list.footer__list--categories
+          dt Категории
+          dd
+            a(href="#") Дизайн
+          dd
+            a(href="#") Программирование
+          dd
+            a(href="#") Маркетинг
+          dd
+            a(href="#") Менеджмент
+          dd
+            a(href="#") Аналитика
+        dl.footer__list.footer__list--popular
+          dt Популярные направления
+          dd
+            a(href="#") Веб-разработка
+          dd
+            a(href="#") Java-разработка
+          dd
+            a(href="#") Python-разработка
+          dd
+            a(href="#") SMM-продвижение
+          dd
+            a(href="#") Графический дизайн
+          dd
+            a(href="#") Дизайн интерьеров
+        dl.footer__list.footer__list--info
+          dt Общая информация
+          dd
+            a(href="#") О проекте
+          dd
+            a(href="#") Политика конфиденциальности
+          dd
+            a(href="#") Пользовательское соглашение

@@ -1,0 +1,17 @@
+.rating-stars {
+  display: flex;
+  column-gap: 3px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    input {
+      position: relative;
+      appearance: none;
+      width: 14px;
+      height: 12px;
+      background-image: url("../img/svg/icon-star-gold.svg");
+    }
+  }
+}

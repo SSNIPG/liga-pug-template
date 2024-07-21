@@ -1,0 +1,56 @@
+.company-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  margin: 0;
+  padding: 0;
+  padding-left: 38px;
+  list-style: none;
+
+  &__item {
+    position: relative;
+    height: 18px;
+    border-radius: 5px;
+
+    span {
+      position: absolute;
+      left: -41px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      // background-color: #5caf56;
+      border-radius: 50%;
+    }
+  }
+
+  &__item--skillbox {
+    width: 186px;
+    background-image: linear-gradient(to right, #323be1, #323be1 107px, #dfe1ff 107px, #dfe1ff 100%);
+
+    // span {
+    //   background-image: url("/img/sprite.svg#icon-skillbox");
+    // }
+  }
+
+  &__item--skillfactory {
+    width: 273px;
+    background-image: linear-gradient(to right, #5caf56, #5caf56 192px, rgba(130, 217, 124, 0.31) 192px, rgba(130, 217, 124, 0.31) 100%);
+  }
+
+  &__item--geekbrains {
+    width: 347px;
+    background-image: linear-gradient(to right, #222222, #222222 146px, #e7e7e7 146px, #e7e7e7 100%);
+  }
+
+  &__item--netology {
+    width: 276px;
+    background-image: linear-gradient(to right, #eb236b, #eb236b 208px, #ffcfe0 208px, #ffcfe0 100%);
+  }
+
+  &__item--skypro {
+    width: 302px;
+    background-image: linear-gradient(to right, #54bff9, #54bff9 135px, #cdedff 135px, #cdedff 100%);
+  }
+}

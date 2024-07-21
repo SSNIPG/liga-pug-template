@@ -1,23 +1,29 @@
 .main-nav {
+  &__wrapper {
+    min-width: 882px;
+  }
+
   &__list {
     display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
+    flex-wrap: wrap;
+    min-width: 498px;
+    margin: 0 23px;
+    padding: 6px 0 0 0;
 
     list-style: none;
   }
 
-  &__item {
-    margin-right: 20px;
+  &__item:not(:last-child) {
+    margin-right: 172px;
   }
 
   &__link {
-    color: $color-default-white;
+    font-weight: 500;
+    color: #454545;
 
     &.is-active {
-      opacity: 0.6;
+      font-weight: 600;
+      color: #486dd8;
     }
   }
 

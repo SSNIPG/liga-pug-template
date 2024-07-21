@@ -7,30 +7,45 @@ mixin header(headerMods, currentUrl)
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Курсы"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Блог"
       },
     ]
 
+    const directions = ["Дизайн", "Программирование", "Аналитика", "Менеджмент", "Маркетинг", "Финансы"]
+
+    const professions = ["3D анимация", "3D MAX", "3D-моделирование", "Adobe After Effects", "Adobe Illustrator", "Adobe Photoshop", "Отрисовка иллюстраций", "Figma", "Геймдизайн", "Графический дизайн", "Дизайн интерьеров", "Дизайн мобильных приложений", "Motion-дизайн", "Скетчинг", "Типографика", "UX/UI дизайн", "Создание и монтаж видео", "Веб-дизайн" ]
+
   header.header(class=headerMods)
     .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active= link.text
-                else
-                  a.main-nav__link(href=link.href)= link.text
+      .header__inner
+        if(currentUrl === "index.html")
+          //- lighthouse снимает 10 баллов SEO за <a> без href
+          span.header__logo FindEdu
+            +icon("icon-logo", 34, 39)
+        else
+          a.header__logo(href="index.html", aria-label="Переход на главную") FindEdu
+        nav.main-nav
+          button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+            +icon("icon-burger", 20, 20)
+          .main-nav__wrapper
+            ul.main-nav__list
+              each link in headerLinks
+                - const activeState = currentUrl === link.href
+                li.main-nav__item
+                  if(activeState)
+                    span.main-nav__link.is-active= link.text
+                  else
+                    a.main-nav__link(href=link.href)= link.text
+      ul.header__list-directions
+        each direction in directions
+          li.header__item-direction
+            span(tabindex="0")= direction
+            if(direction === "Дизайн")
+              ul.header__sublist-direction
+                each profession in professions
+                  li.header__profession
+                    a(href="#")= profession

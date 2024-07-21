@@ -1,0 +1,168 @@
+.banner-card {
+  display: none;
+
+  &__inner {
+    display: flex;
+    column-gap: 50px;
+    min-height: 648px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 425px;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    padding: 0 70px 0 20px;
+
+    span {
+      font-size: 30px;
+      line-height: 36px;
+      font-weight: 800;
+      color: $color-royal-blue;
+      text-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    p {
+      margin: 0;
+      line-height: 26px;
+      color: $color-black-russian;
+    }
+  }
+
+  &__switching {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 630px;
+    row-gap: 47px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    padding: 23px 116px 23px 110px;
+    background-color: $color-snow;
+    box-shadow: 0 3px 31px 0 rgba(112, 144, 176, 0.02);
+    border-radius: 30px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 23px;
+      left: 27px;
+      content: "";
+      width: 59px;
+      height: 59px;
+      background-color: $color-magnolia;
+      border: 1px solid $color-white-smoke;
+      border-radius: 20px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 25px;
+      line-height: 40px;
+      font-weight: 400;
+      color: $color-seal-brown;
+    }
+
+    p {
+      margin: 0;
+      line-height: 26px;
+      color: #747474;
+    }
+
+    &--users {
+      &::after {
+        position: absolute;
+        top: 38px;
+        left: 46px;
+        content: "";
+        width: 25px;
+        height: 25px;
+        mask-image: url("../img/svg/icon-for-users.svg");
+        background-color: #655bd5;
+      }
+    }
+
+    &--courses {
+      &::after {
+        position: absolute;
+        top: 42px;
+        left: 46px;
+        content: "";
+        width: 21px;
+        height: 21px;
+        mask-image: url("../img/svg/icon-for-courses.svg");
+        background-color: #655bd5;
+      }
+    }
+
+    &--mentors {
+      &::after {
+        position: absolute;
+        top: 42px;
+        left: 49px;
+        content: "";
+        width: 14px;
+        height: 21px;
+        mask-image: url("../img/svg/icon-for-mentors.svg");
+        background-color: #655bd5;
+      }
+    }
+
+    &.is-active {
+      background-color: $color-royal-blue;
+      pointer-events: none;
+
+      &::before {
+        background-color: #567ae4;
+        border: none;
+      }
+
+      &::after {
+        background-color: $color-default-white;
+      }
+
+      h3 {
+        color: $color-default-white;
+      }
+
+      p {
+        color: $color-perano;
+      }
+    }
+
+    @include hover-focus {
+      background-color: $color-solitude;
+
+      &::before {
+        background-color: #edf2ff;
+      }
+
+      &::after {
+        background-color: $color-portage;
+      }
+    }
+  }
+}
+
+.is-open {
+  display: block;
+}
