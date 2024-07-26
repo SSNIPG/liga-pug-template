@@ -3,7 +3,7 @@
 
 @import "vendor/normalize";
 // Swiper 8.4.7
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -35,6 +35,9 @@
 @import "blocks/promo-banner";
 @import "blocks/banner-list";
 @import "blocks/banner-card";
+@import "blocks/buttons";
+@import "blocks/button";
+@import "blocks/button";
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg

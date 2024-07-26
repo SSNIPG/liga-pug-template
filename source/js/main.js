@@ -3,7 +3,9 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
-
+import {getSlider} from './modules/slider/init-slider.js';
+import {onTabClick} from './modules/banners/banners.js';
+import {onToggleClick, onItemClick, onWindowClick} from './modules/header-list/header-list.js';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -12,7 +14,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   mobileVhFix();
-
+  getSlider();
+  onToggleClick();
+  onItemClick();
+  onWindowClick();
+  onTabClick();
   // Modules
   // ---------------------------------
 

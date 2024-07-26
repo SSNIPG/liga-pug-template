@@ -1,5 +1,26 @@
 .hero {
+  position: relative;
   padding: 40px 0 106px;
+
+  @include vp-767 {
+    padding: 55px 0 60px;
+  }
+
+  &__img-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    @include vp-767 {
+      display: block;
+    }
+  }
 
   .container {
     display: flex;
@@ -12,6 +33,22 @@
     width: 660px;
     padding-top: 125px;
 
+    @include vp-1279 {
+      width: 440px;
+    }
+
+    @include vp-1023 {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+    }
+
+    @include vp-767 {
+      padding-top: 0;
+      text-align: left;
+      align-items: flex-start;
+    }
+
     h1 {
       margin: 0;
       margin-bottom: 35px;
@@ -19,6 +56,30 @@
       font-weight: 800;
       line-height: 60px;
       color: $color-seal-brown;
+
+      @include vp-1279 {
+        font-size: 44px;
+        line-height: 50px;
+      }
+
+      @include vp-1023 {
+        font-size: 36px;
+        line-height: 42px;
+
+        br {
+          display: none;
+        }
+      }
+
+      @include vp-767 {
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: 32px;
+
+        br:last-child {
+          display: block;
+        }
+      }
     }
 
     p {
@@ -28,6 +89,22 @@
       font-weight: 500;
       line-height: 23px;
       color: $color-nobel;
+
+      @include vp-1279 {
+        width: 380px;
+      }
+
+      @include vp-1023 {
+        width: 460px;
+      }
+
+      @include vp-767 {
+        width: 100%;
+        margin-bottom: 26px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+      }
     }
   }
 
@@ -51,6 +128,18 @@
     flex-shrink: 0;
     flex-basis: 577px;
     margin-left: 7px;
+
+    @include vp-1439 {
+      flex-basis: 540px;
+    }
+
+    @include vp-1279 {
+      flex-basis: 525px;
+    }
+
+    @include vp-1023 {
+      display: none;
+    }
   }
 
   &__img-wrapper {
@@ -58,40 +147,77 @@
     top: -72px;
   }
 
-  .btn {
+  &__btn-wrapper {
     position: relative;
-    width: 306px;
-    min-height: 78px;
-    padding: 30px 110px 29px 60px;
-    font-weight: 500;
-    line-height: 19px;
-    color: $color-snow;
-    background-color: $color-royal-blue;
-    border-radius: 20px;
+    width: max-content;
 
-    &::before {
-      position: absolute;
-      right: 46px;
-      bottom: 50%;
-      transform: translateY(50%);
-      content: "";
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      background-color: $color-cornflower-blue;
+    .btn {
+      position: relative;
+      width: 306px;
+      min-height: 78px;
+      padding: 30px 110px 29px 60px;
+      font-weight: 500;
+      line-height: 19px;
+      color: $color-snow;
+      background-color: $color-royal-blue;
+      border-radius: 20px;
+
+      @include vp-1023 {
+        width: 260px;
+        padding-left: 40px;
+        padding-right: 80px;
+      }
+
+      @include vp-767 {
+        width: 191px;
+        min-height: auto;
+        padding: 14px 60px 14px 17px;
+        font-size: 14px;
+        line-height: 17px;
+        border-radius: 12px;
+      }
+
+      &::before {
+        position: absolute;
+        right: 46px;
+        bottom: 50%;
+        transform: translateY(50%);
+        content: "";
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: $color-cornflower-blue;
+
+        @include vp-1023 {
+          right: 20px;
+        }
+
+        @include vp-767 {
+          right: 18px;
+          width: 29px;
+          height: 29px;
+        }
+      }
     }
 
-    &::after {
+    svg {
       position: absolute;
       right: 60px;
       top: 50%;
       transform: translateY(-50%);
-      content: "";
-      width: 19px;
-      height: 20px;
-      background-image: url("../img/svg/icon-compare.svg");
+
+      @include vp-1023 {
+        right: 33px;
+      }
+
+      @include vp-767 {
+        right: 26px;
+        width: 13px;
+        height: 14px;
+      }
     }
   }
+
 
   &__price {
     position: absolute;

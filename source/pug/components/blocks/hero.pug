@@ -1,13 +1,18 @@
 mixin hero()
   section.hero
+    .hero__img-block
+      .hero__gradient
+        +picture("content", "hero-bg", "png", "320", "829", "")
     .container
       .hero__info
-        h1 FindEdu - все для<br> выбора новой профессии в одном месте
+        h1 FindEdu - все для<br> выбора новой профессии<br> в одном месте
         p
           |Изучение тем на вебинарах с преподавателями, личные
           |консультации с наставником. После прохождения курса
           |с наставником. После прохождения курса
-        +btn({text:"Сравнить курсы"})
+        .hero__btn-wrapper
+          +btn({text:"Сравнить курсы"})
+          +icon("icon-compare", 19, 20)
       .hero__description
         .hero__img-wrapper
           +picture("content", "man", "png", "646", "578", "Счастливый мужчина.")
@@ -15,15 +20,15 @@ mixin hero()
           span.hero__profession UX/UI designer
           ul.hero__rating-list.rating-stars
             li.rating-stars__item
-              input(type="radio", name="stars", aria-label="1")
+              +icon("icon-star-gold", 14, 12)
             li.rating-stars__item
-              input(type="radio", name="stars", aria-label="2")
+              +icon("icon-star-gold", 14, 12)
             li.rating-stars__item
-              input(type="radio", name="stars", aria-label="3")
+              +icon("icon-star-gold", 14, 12)
             li.rating-stars__item
-              input(type="radio", name="stars", aria-label="4")
+              +icon("icon-star-gold", 14, 12)
             li.rating-stars__item
-              input(type="radio", name="stars", aria-label="5")
+              +icon("icon-star-gold", 14, 12)
           p UX/UI-дизайнер — одна из самых востребованных профессий 2020 года
           .hero__price-info
             .hero__price-value
