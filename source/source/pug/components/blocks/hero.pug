@@ -1,0 +1,53 @@
+mixin hero()
+  section.hero
+    .hero__img-block
+      .hero__gradient
+        +picture("content", "hero-bg", "png", "320", "829", "")
+    .container
+      .hero__info
+        h1 FindEdu - все для<br> выбора новой профессии<br> в одном месте
+        p
+          |Изучение тем на вебинарах с преподавателями, личные
+          |консультации с наставником. После прохождения курса
+          |с наставником. После прохождения курса
+        .hero__btn-wrapper
+          +btn({text:"Сравнить курсы"})
+          +icon("icon-compare", 19, 20)
+      .hero__description
+        .hero__img-wrapper
+          +picture("content", "man", "png", "646", "578", "Счастливый мужчина.")
+        .hero__price
+          span.hero__profession UX/UI designer
+          ul.hero__rating-list.rating-stars
+            li.rating-stars__item
+              +icon("icon-star-gold", 14, 12)
+            li.rating-stars__item
+              +icon("icon-star-gold", 14, 12)
+            li.rating-stars__item
+              +icon("icon-star-gold", 14, 12)
+            li.rating-stars__item
+              +icon("icon-star-gold", 14, 12)
+            li.rating-stars__item
+              +icon("icon-star-gold", 14, 12)
+          p UX/UI-дизайнер — одна из самых востребованных профессий 2020 года
+          .hero__price-info
+            .hero__price-value
+              span 120 000 рублей
+            .hero__amount-company
+              span 1 561 компания
+          ul.hero__company-list.company-list
+            li.company-list__item.company-list__item--skillbox
+              span
+                +icon("icon-skillbox", 24, 24)
+            li.company-list__item.company-list__item--skillfactory
+              span
+                +icon("icon-skillfactory", 24, 24)
+            li.company-list__item.company-list__item--geekbrains
+              span
+                +icon("icon-geekbrains", 24, 24)
+            li.company-list__item.company-list__item--netology
+              span
+                +icon("icon-netology", 24, 24)
+            li.company-list__item.company-list__item--skypro
+              span
+                +icon("icon-skypro", 24, 24)

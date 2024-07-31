@@ -1,0 +1,60 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "index.html",
+        text: "Главная"
+      },
+      {
+        href: "#",
+        text: "Курсы"
+      },
+      {
+        href: "#",
+        text: "Блог"
+      },
+    ]
+
+    const directions = ["Дизайн", "Программирование", "Аналитика", "Менеджмент", "Маркетинг", "Финансы"]
+
+    const professions = ["3D анимация", "3D MAX", "3D-моделирование", "Adobe After Effects", "Adobe Illustrator", "Adobe Photoshop", "Отрисовка иллюстраций", "Figma", "Геймдизайн", "Графический дизайн", "Дизайн интерьеров", "Дизайн мобильных приложений", "Motion-дизайн", "Скетчинг", "Типографика", "UX/UI дизайн", "Создание и монтаж видео", "Веб-дизайн" ]
+
+  header.header(class=headerMods, data-header)
+    .container
+      .header__inner
+        if(currentUrl === "index.html")
+          //- lighthouse снимает 10 баллов SEO за <a> без href
+          .header__logo
+            span FindEdu
+            +icon("icon-logo", 34, 39)
+        else
+          a.header__logo(href="index.html", aria-label="Переход на главную") FindEdu
+        nav.main-nav
+          .main-nav__wrapper
+            ul.main-nav__list
+              each link in headerLinks
+                - const activeState = currentUrl === link.href
+                if(link.text=== "Курсы")
+                  li.main-nav__item.main-nav__item--courses
+                    if(activeState)
+                      span.main-nav__link.is-active= link.text
+                    else
+                      a.main-nav__link(href=link.href)= link.text
+                else
+                  li.main-nav__item
+                    if(activeState)
+                      span.main-nav__link.is-active= link.text
+                    else
+                      a.main-nav__link(href=link.href)= link.text
+          button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-toggle)
+            +icon("icon-burger", 22, 12)
+      ul.header__list-directions(data-header-list)
+        each direction in directions
+          li.header__item-direction(tabindex="0", data-header-item)
+            span= direction
+            +icon("icon-triangle", 10, 8)
+            if(direction === "Дизайн")
+              ul.header__sublist-direction(data-header-sublist)
+                each profession in professions
+                  li.header__profession
+                    a(href="#")= profession

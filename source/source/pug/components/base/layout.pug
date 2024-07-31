@@ -1,0 +1,53 @@
+doctype html
+
+include ../components
+
+block variables
+
+html(lang="ru")
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="description", content="FindEdu — сервис по подбору образовательных курсов.")
+    link(rel="apple-touch-icon", sizes="180x180", href="img/favicon/apple-touch-icon.png")
+    link(rel="icon", href="favicon.ico")
+    link(rel="icon", type="image/png", sizes="32x32", href="img/favicon/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
+    //- в подключение фавикон манифеста обязательно добавьте строчки crossorigin="use-credentials"
+    link(rel="preload", href="fonts/Inter-Regular-400.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/Inter-Medium-500.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/Inter-SemiBold-600.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/Inter-Bold-700.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/Inter-ExtraBold-800.woff2", as="font", crossorigin="anonymous")
+    //- При необходимости вы можете добавить разметку Open graf. - const Open graf = true
+    if (openGraf)
+      //- Обязательно измените содержание контента на тот что необходим!
+      //- Введите заголовок
+      meta(property="og:title", content="Лига решений")
+      //- Введите заголовок путь к картинке
+      meta(property="og:image", content="https://24fortest.ru/img/content/sharing.png")
+      //- Введите необходимый тип
+      meta(property="og:type", content="article")
+      //- Введите адрес сайта
+      meta(property="og:url", content="https://24fortest.ru/")
+      //- Введите описание
+      meta(property="og:description", content="Простые и понятные решения в помощь разработчикам от команды Лига А")
+
+    link(rel="stylesheet", href="css/style.min.css")
+
+  body
+    .wrapper(class=wrapperMods, data-wrapper)
+      if (hasHeader)
+        +header(headerMods, currentUrl)
+
+      block main
+
+      if (hasFooter)
+        +footer(footerMods)
+
+    block modals
+
+    script(src="js/vendor.min.js")
+    script(src="js/main.min.js")

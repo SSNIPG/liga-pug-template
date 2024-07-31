@@ -1,0 +1,349 @@
+.directions {
+  position: relative;
+  padding: 229px 0 193px;
+
+  @include vp-1023 {
+    padding: 100px 0 140px;
+  }
+
+  @include vp-767 {
+    padding: 60px 0 40px;
+  }
+
+  &__img-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+
+    @include vp-767 {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 1426px;
+    }
+  }
+
+  .container {
+    @include vp-767 {
+      padding: 0;
+    }
+  }
+
+  &__wrapper {
+    h2 {
+      margin: 0;
+      margin-bottom: 58px;
+      font-size: 40px;
+      line-height: 50px;
+      font-weight: 700;
+      color: $color-night-rider;
+
+      @include vp-1279 {
+        font-size: 36px;
+        line-height: 42px;
+      }
+
+      @include vp-1023 {
+        font-size: 32px;
+        text-align: center;
+      }
+
+      @include vp-767 {
+        margin-bottom: 42px;
+        padding-left: 20px;
+        font-size: 20px;
+        line-height: 26px;
+        text-align: left;
+      }
+    }
+  }
+
+  &__swiper {
+    @include vp-767 {
+      height: 280px;
+      margin-bottom: 15px;
+      overflow-x: clip;
+      overflow-y: visible;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 47px 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include vp-1023 {
+      gap: 20px 12px;
+    }
+
+    @include vp-767 {
+      justify-content: start;
+      flex-wrap: nowrap;
+      gap: 0;
+
+      .swiper-slide-active {
+        transform: translateY(-14px);
+        transition: 0.8s ease-in;
+      }
+    }
+  }
+
+  &__item {
+    width: 414px;
+    min-height: 425px;
+    background-color: $color-default-white;
+    border-radius: 56px;
+
+    @include hover-focus {
+      h3 {
+        color: $color-default-white;
+      }
+
+      .directions__item-content {
+        color: $color-default-white;
+
+        span:nth-of-type(2n + 1) {
+          &::after {
+            background-color: $color-default-white;
+          }
+        }
+      }
+    }
+
+    @include vp-1439 {
+      width: 393px;
+    }
+
+    @include vp-1023 {
+      width: 345px;
+      min-height: 365px;
+    }
+
+    @include vp-767 {
+      width: 280px;
+      min-height: 280px;
+      border-radius: 35px;
+    }
+  }
+
+  &__item--design {
+    @include vp-767 {
+      background-color: $color-maya-blue;
+    }
+
+    @include hover-focus {
+      background-color: $color-maya-blue;
+    }
+  }
+
+  &__item--programming {
+    @include vp-767 {
+      background-color: $color-tickle-me-pink;
+    }
+
+    @include hover-focus {
+      background-color: $color-tickle-me-pink;
+    }
+  }
+
+  &__item--management {
+    @include vp-767 {
+      background-color: $color-your-pink;
+    }
+
+    @include hover-focus {
+      background-color: $color-your-pink;
+    }
+  }
+
+  &__item--analytics {
+    @include vp-767 {
+      background-color: $color-carnation-pink;
+    }
+
+    @include hover-focus {
+      background-color: $color-carnation-pink;
+    }
+  }
+
+  &__item--marketing {
+    @include vp-767 {
+      background-color: $color-macaroni-and-cheese;
+    }
+
+    @include hover-focus {
+      background-color: $color-macaroni-and-cheese;
+    }
+  }
+
+  &__item--finance {
+    @include vp-767 {
+      background-color: #6cb7f2;
+    }
+
+    @include hover-focus {
+      background-color: #6cb7f2;
+    }
+  }
+
+  &__item-inner {
+    padding: 55px 15px 55px 20px;
+
+    @include vp-1439 {
+      padding-left: 10px;
+      padding-right: 5px;
+    }
+
+    @include vp-767 {
+      padding: 40px 10px 44px 22px;
+    }
+  }
+
+  &__item-header {
+    position: relative;
+    margin-bottom: 76px;
+    padding: 12px 0 12px 97px;
+
+    @include vp-1023 {
+      margin-bottom: 60px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 42px;
+      padding: 7px 0 7px 52px;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @include vp-767 {
+        width: 38px;
+        height: 37px;
+      }
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 25px;
+      line-height: 30px;
+      font-weight: 500;
+      color: #2f2828;
+
+      @include vp-1023 {
+        font-size: 22px;
+        line-height: 26px;
+      }
+
+      @include vp-767 {
+        font-size: 18px;
+        line-height: 22px;
+        color: $color-default-white;
+      }
+    }
+  }
+
+  &__item-list {
+    padding: 0 0 0 10px;
+    list-style: none;
+
+    @include vp-1023 {
+      padding: 0;
+    }
+
+    @include vp-767 {
+      overflow: hidden;
+    }
+  }
+
+  &__item-content {
+    color: #6b6b6b;
+
+    @include vp-767 {
+      display: flex;
+      color: $color-default-white;
+    }
+
+    span {
+      display: inline-block;
+      font-size: 17px;
+      line-height: 29px;
+
+      @include vp-1023 {
+        font-size: 15px;
+      }
+
+      @include vp-767 {
+        font-size: 14px;
+        line-height: 22px;
+        white-space: nowrap;
+      }
+    }
+
+    span:nth-of-type(2n + 1) {
+      position: relative;
+      margin-right: 40px;
+
+      @include vp-767 {
+        margin-right: 24px;
+      }
+
+      &::after {
+        position: absolute;
+        right: -27px;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        width: 15px;
+        height: 15px;
+        mask-image: url("../img/svg/icon-star.svg");
+        background-color: #6b6b6b;
+
+        @include vp-767 {
+          right: -15px;
+          width: 10px;
+          height: 10px;
+          background-color: $color-default-white;
+          mask-size: 10px;
+        }
+      }
+    }
+
+    span:last-child {
+      @include vp-767 {
+        background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  // &__item-dark-grey {
+  //   color: #6b6b6b;
+  // }
+
+  &__item-grey {
+    opacity: 0.8;
+  }
+
+  &__item-light-grey {
+    opacity: 0.6;
+  }
+
+  &__item-silver {
+    opacity: 0.4;
+  }
+
+  &__item-light-silver {
+    opacity: 0.2;
+  }
+}

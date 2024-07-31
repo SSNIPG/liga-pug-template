@@ -1,0 +1,147 @@
+mixin directions()
+  section.directions
+    .directions__img-block
+      .description__gradient
+        +picture("content", "directions-bg", "png", "1920", "1426")
+    .container
+      .directions__wrapper
+        h2 Выбери направление
+        .directions__swiper.swiper
+          ul.directions__list.swiper-wrapper
+            li.directions__item.directions__item--design.swiper-slide
+              a.directions__item-link(href="#")
+                .directions__item-inner
+                  .directions__item-header
+                    +icon("icon-for-design", 57, 55)
+                    h3 Дизайн
+                  ul.directions__item-list
+                    li.directions__item-content.directions__item-dark-grey
+                      span Web-дизайн
+                      span Дизайн интерьеров
+                    li.directions__item-content.directions__item-grey
+                      span 3D-моделирование
+                      span Motion-дизайн
+                    li.directions__item-content.directions__item-light-grey
+                      span Графический дизайн
+                      span 3D-анимация
+                    li.directions__item-content.directions__item-silver
+                      span UX/UI дизайн
+                      span ArchiCAD
+                    li.directions__item-content.directions__item-light-silver
+                      span Геймдизайн
+                      span Adobe After Effects
+            li.directions__item.directions__item--programming.swiper-slide
+              a.directions__item-link(href="#")
+                .directions__item-inner
+                  .directions__item-header
+                    +icon("icon-for-programming", 54, 55)
+                    h3 Программирование
+                  ul.directions__item-list
+                    li.directions__item-content.directions__item-dark-grey
+                      span Web-разработка
+                      span DevOps
+                    li.directions__item-content.directions__item-grey
+                      span JavaScript-разработка
+                      span ReactJS
+                    li.directions__item-content.directions__item-light-grey
+                      span Мобильная разработка
+                      span GIT
+                    li.directions__item-content.directions__item-silver
+                      span Системное администрирование
+                    li.directions__item-content.directions__item-light-silver
+                      span Верстка на HTML/CSS
+                      span Unity
+            li.directions__item.directions__item--management.swiper-slide
+              a.directions__item-link(href="#")
+                .directions__item-inner
+                  .directions__item-header
+                    +icon("icon-for-management", 56, 55)
+                    h3 Менеджмент
+                  ul.directions__item-list
+                    li.directions__item-content.directions__item-dark-grey
+                      span Product-менеджмент
+                      span Личностный рост
+                    li.directions__item-content.directions__item-grey
+                      span Управление разработкой и IT
+                      span AGILE
+                    li.directions__item-content.directions__item-light-grey
+                      span Бренд-менеджмент
+                      span Запуск стартапов
+                    li.directions__item-content.directions__item-silver
+                      span Финансовая аналитика
+                      span Бухгалтерия
+                    li.directions__item-content.directions__item-light-silver
+                      span Управление в SMM
+                      span IT-рекрутмент
+            li.directions__item.directions__item--analytics.swiper-slide
+              a.directions__item-link(href="#")
+                .directions__item-inner
+                  .directions__item-header
+                    +icon("icon-for-analytics", 60, 55)
+                    h3 Аналитика
+                  ul.directions__item-list
+                    li.directions__item-content.directions__item-dark-grey
+                      span Data Science
+                      span Продуктовая аналитика
+                    li.directions__item-content.directions__item-grey
+                      span Web-аналитика
+                      span Системная аналитика
+                    li.directions__item-content.directions__item-light-grey
+                      span Бизнес-аналитика
+                      span Аналитика на R
+                    li.directions__item-content.directions__item-silver
+                      span Работа с Excel и Google таблицами
+                    li.directions__item-content.directions__item-light-silver
+                      span Машинное обучение
+                      span Нейронные сети
+            li.directions__item.directions__item--marketing.swiper-slide
+              a.directions__item-link(href="#")
+                .directions__item-inner
+                  .directions__item-header
+                    +icon("icon-for-marketing", 64, 55)
+                    h3 Маркетинг
+                  ul.directions__item-list
+                    li.directions__item-content.directions__item-dark-grey
+                      span Web-аналитика
+                      span SMM-продвижение
+                    li.directions__item-content.directions__item-grey
+                      span Интернет-маркетинг
+                      span PR-менеджмент
+                    li.directions__item-content.directions__item-light-grey
+                      span SEO-продвижение
+                      span Копирайтинг
+                    li.directions__item-content.directions__item-silver
+                      span Контент-маркетинг
+                      span SERM и репутация
+                    li.directions__item-content.directions__item-light-silver
+                      span Маркетинговая аналитика
+                      span Google Ads
+            li.directions__item.directions__item--finance.swiper-slide
+              a.directions__item-link(href="#")
+                .directions__item-inner
+                  .directions__item-header
+                    +icon("icon-for-finance", 50, 55)
+                    h3 Финансы
+                  ul.directions__item-list
+                    li.directions__item-content.directions__item-dark-grey
+                      span Web-аналитика
+                      span SMM-продвижение
+                    li.directions__item-content.directions__item-grey
+                      span Интернет-маркетинг
+                      span PR-менеджмент
+                    li.directions__item-content.directions__item-light-grey
+                      span SEO-продвижение
+                      span Копирайтинг
+                    li.directions__item-content.directions__item-silver
+                      span Контент-маркетинг
+                      span SERM и репутация
+                    li.directions__item-content.directions__item-light-silver
+                      span Маркетинговая аналитика
+                      span Google Ads
+        .directions__buttons.buttons
+          .buttons__inner.buttons__inner--prev
+            +btn().directions__btn--prev.button.button--prev|
+            +icon("icon-arrow", 7, 12)
+          .buttons__inner
+            +btn().directions__btn--next.button.button--next
+            +icon("icon-arrow", 7, 12)

@@ -1,0 +1,100 @@
+.main-nav {
+  @include vp-1023 {
+    display: flex;
+    width: 100%;
+  }
+
+  &__wrapper {
+    width: 100%;
+    min-width: 882px;
+
+    @include vp-1279 {
+      min-width: 850px;
+    }
+
+    @include vp-1023 {
+      min-width: auto;
+    }
+
+    @include vp-767 {
+      margin-right: 50px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 498px;
+    margin: 0 23px;
+    padding: 6px 0 0 0;
+
+    list-style: none;
+
+    @include vp-1279 {
+      justify-content: center;
+    }
+
+    @include vp-1023 {
+      padding: 0;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      min-width: auto;
+    }
+  }
+
+  &__item {
+    @include vp-767 {
+      display: none;
+    }
+
+    &--courses {
+      @include vp-767 {
+        display: block;
+      }
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 172px;
+
+    @include vp-1023 {
+      margin-right: 120px;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    color: #454545;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 600;
+    }
+
+    &.is-active {
+      font-weight: 600;
+      color: #486dd8;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    border: none;
+    background-color: $color-transparent;
+
+    @include vp-1023 {
+      display: block;
+    }
+
+    @include vp-767 {
+      padding: 3px 0 3px 6px;
+    }
+  }
+}

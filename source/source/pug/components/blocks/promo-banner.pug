@@ -1,0 +1,101 @@
+mixin promo-banner()
+  section.promo-banner
+    .container
+      .promo-banner__inner
+        .promo-banner__title
+          h2
+            |Агрегируем курсы по самым актуальным темам
+            |для новичков и практикующих специалистов.
+        .promo-banner__swiper.swiper
+          ul.promo-banner__list.banner-list.swiper-wrapper(data-list-banner)
+            li.promo-banner__item.banner-card.banner-card--users.is-open.swiper-slide(data-card-banner, id="btn-1")
+              .banner-card__inner
+                .banner-card__info
+                  .banner-card__img
+                    +picture("content", "banner-img-1", "png", "424", "383")
+                  .banner-card__text
+                    span 300+ довольных пользователей
+                    p Дополнительно в этом методе есть кнопка «Объединить по строкам». С помощью неё можно объединить ячейки выбранного диапазона построчно.
+                .banner-card__switching
+                  ul.banner-card__list
+                    li.banner-card__item.banner-card__item--users.is-active(tabindex="0", data-btn="#btn-1")
+                      h3 Довольные пользователи
+                      p
+                        |Изучение тем на вебинарах с преподавателями, наставником.
+                        |После прохождения курса вы будете
+                      +icon("icon-for-users", 25, 25)
+                    li.banner-card__item.banner-card__item--courses(tabindex="0", data-btn="#btn-2")
+                      h3 Образовательные курсы
+                      p
+                        |Изучение тем на вебинарах с преподавателями, наставником.
+                        |После прохождения курса вы будете
+                      +icon("icon-for-courses", 21, 21)
+                    li.banner-card__item.banner-card__item--mentors(tabindex="0", data-btn="#btn-3")
+                      h3 Менторы из больших компаний
+                      p
+                        |Изучение тем на вебинарах с преподавателями, наставником.
+                        |После прохождения курса вы будете
+                      +icon("icon-for-mentors", 14, 21)
+            li.promo-banner__item.banner-card.swiper-slide(data-card-banner, id="btn-2")
+              .banner-card__inner
+                .banner-card__info
+                  .banner-card__img
+                    +picture("content", "banner-img-2", "png", "425", "425")
+                  .banner-card__text
+                    span 1000+ образовательных курсов
+                    p Дополнительно в этом методе есть кнопка «Объединить по строкам». С помощью неё можно объединить ячейки выбранного диапазона построчно.
+                .banner-card__switching
+                  ul.banner-card__list
+                    li.banner-card__item.banner-card__item--users(tabindex="0", data-btn="#btn-1")
+                      h3 Довольные пользователи
+                      p
+                        |Изучение тем на вебинарах с преподавателями, наставником.
+                        |После прохождения курса вы будете
+                      +icon("icon-for-users", 25, 25)
+                    li.banner-card__item.banner-card__item--courses(tabindex="0", data-btn="#btn-2")
+                      h3 Образовательные курсы
+                      p
+                        |Изучение тем на вебинарах с преподавателями, наставником.
+                        |После прохождения курса вы будете
+                      +icon("icon-for-courses", 21, 21)
+                    li.banner-card__item.banner-card__item--mentors(tabindex="0", data-btn="#btn-3")
+                      h3 Менторы из больших компаний
+                      p
+                        |Изучение тем на вебинарах с преподавателями, наставником.
+                        |После прохождения курса вы будете
+                      +icon("icon-for-mentors", 14, 21)
+            li.promo-banner__item.banner-card.swiper-slide(data-card-banner, id="btn-3")
+              .banner-card__inner
+                .banner-card__info
+                  .banner-card__img
+                    +picture("content", "banner-img-3", "png", "425", "425")
+                  .banner-card__text
+                    span 20+ менторов больших компаний
+                    p Дополнительно в этом методе есть кнопка «Объединить по строкам». С помощью неё можно объединить ячейки выбранного диапазона построчно.
+                .banner-card__switching
+                  ul.banner-card__list
+                    li.banner-card__item.banner-card__item--users(tabindex="0", data-btn="#btn-1")
+                      h3 Довольные пользователи
+                      p
+                        |Изучение тем на вебинарах с преподавателями, наставником.
+                        |После прохождения курса вы будете
+                      +icon("icon-for-users", 25, 25)
+                    li.banner-card__item.banner-card__item--courses(tabindex="0", data-btn="#btn-2")
+                      h3 Образовательные курсы
+                      p
+                        |Изучение тем на вебинарах с преподавателями, наставником.
+                        |После прохождения курса вы будете
+                      +icon("icon-for-courses", 21, 21)
+                    li.banner-card__item.banner-card__item--mentors(tabindex="0", data-btn="#btn-3")
+                      h3 Менторы из больших компаний
+                      p
+                        |Изучение тем на вебинарах с преподавателями, наставником.
+                        |После прохождения курса вы будете
+                      +icon("icon-for-mentors", 14, 21)
+        .promo-banner__buttons.buttons
+          .buttons__inner.buttons__inner--prev
+            +btn().promo-banner__btn--prev.button.button--prev|
+            +icon("icon-arrow", 7, 12)
+          .buttons__inner
+            +btn().promo-banner__btn--next.button.button--next
+            +icon("icon-arrow", 7, 12)
